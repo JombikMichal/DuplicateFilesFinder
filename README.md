@@ -52,7 +52,7 @@ Do you want to delete ${f}? (y/n)
 Keeps only one file and others will be replaced with soft links.
 
 ```
-For which you want to create soft link? (file number)
+File for which to create soft link: (file number)
 ```
 
 ### Create hard link (3)
@@ -60,7 +60,7 @@ For which you want to create soft link? (file number)
 Keeps only one file and others will be replaced with hard links.
 
 ```
-For which you want to create hard link? (file number)
+File for which to create hard link: (file number)
 ```
 
 ## Test files
@@ -74,6 +74,7 @@ Found duplicate files:
 1. test2
 
 What do you want to do? (0 = ignore, 1 = delete, 2 = create soft link, 3 = create hard link)
+…
 ```
 
 ### Complex Test
@@ -85,7 +86,7 @@ Found duplicate files:
 
 What do you want to do? (0 = ignore, 1 = delete, 2 = create soft link, 3 = create hard link)
 
-...
+…
 
 Found duplicate files: 
 0. src/main/java/cz/cuni/mff/HelloWord.java
@@ -94,7 +95,7 @@ Found duplicate files:
 
 What do you want to do? (0 = ignore, 1 = delete, 2 = create soft link, 3 = create hard link)
 
-...
+…
 ```
 
 ---
