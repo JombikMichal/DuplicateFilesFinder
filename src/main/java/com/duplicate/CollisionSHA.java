@@ -1,5 +1,8 @@
 package com.duplicate;
 
+import com.duplicate.display.DuplicateResult;
+import com.duplicate.display.PrintDuplicatesFiles;
+
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -20,16 +23,18 @@ import java.util.stream.Stream;
  */
 public class CollisionSHA {
 
-    private List<File> duplicate;
+    private List<File> duplicates;
+    private DuplicateResult duplicateResult;
     private final String path;
 
     public CollisionSHA(String path) {
         this.path = path;
-        this.duplicate = getDuplicateFiles();
+        this.duplicates = getDuplicateFiles();
+        this.duplicateResult = new PrintDuplicatesFiles(duplicates);
     }
 
-    public List<File> getDuplicate() {
-        return duplicate = getDuplicateFiles();
+    public void diplay(){
+        duplicateResult.diplay();
     }
 
     /**
