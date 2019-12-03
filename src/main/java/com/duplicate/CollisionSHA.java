@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * Collision between two strings after application of SHA256 hash function
+ * Collision between two files after application of SHA256 hash function
  *
  * @author Michal Jombik
  *
