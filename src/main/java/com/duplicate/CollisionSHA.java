@@ -23,14 +23,12 @@ import java.util.stream.Stream;
  */
 public class CollisionSHA {
 
-    private List<File> duplicates;
     private DuplicateResult duplicateResult;
     private final String path;
 
     public CollisionSHA(String path) {
         this.path = path;
-        this.duplicates = getDuplicateFiles();
-        this.duplicateResult = new PrintDuplicatesFiles(duplicates);
+        this.duplicateResult = new PrintDuplicatesFiles(getDuplicateFiles());
     }
 
     public void diplay(){
