@@ -1,5 +1,5 @@
 package cz.cuni.mff;
 
-public class HelloWorldTest {
 
+public class HelloWorldTest {
 }
