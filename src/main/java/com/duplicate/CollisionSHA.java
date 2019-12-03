@@ -19,7 +19,6 @@ import java.util.stream.Stream;
  * Collision between two files after application of SHA256 hash function
  *
  * @author Michal Jombik
- *
  */
 public class CollisionSHA {
 
@@ -31,7 +30,7 @@ public class CollisionSHA {
         this.duplicateResult = new PrintDuplicatesFiles(getDuplicateFiles());
     }
 
-    public void diplay(){
+    public void diplay() {
         duplicateResult.diplay();
     }
 
@@ -57,21 +56,20 @@ public class CollisionSHA {
      * @return List<String> all duplicates files in directory
      */
     private List<File> getDuplicateFiles() {
-        List<File> duplicate = new ArrayList<>();
+        List<File> duplicates = new ArrayList<>();
         List<String> paths = getFiles();
-        for (int i = 0; i < paths.size(); i++){
-            for (int j = i + 1; j < paths.size(); j++){
-                if (Arrays.equals(getFileHash(paths.get(i)), getFileHash(paths.get(j)))){
-                    duplicate.add(new File(paths.get(i)));
-                    duplicate.add(new File(paths.get(j)));
+        for (int i = 0; i < paths.size(); i++) {
+            for (int j = i + 1; j < paths.size(); j++) {
+                if (Arrays.equals(getFileHash(paths.get(i)), getFileHash(paths.get(j))) && (getFileHash(paths.get(j)) != null && getFileHash(paths.get(j)) != null)) {
+                    duplicates.add(new File(paths.get(i)));
+                    duplicates.add(new File(paths.get(j)));
                 }
             }
         }
-        return duplicate;
+        return duplicates;
     }
 
     /**
-     *
      * @return byte[] file hashcode using MessageDigest
      */
     private byte[] getFileHash(String path) {

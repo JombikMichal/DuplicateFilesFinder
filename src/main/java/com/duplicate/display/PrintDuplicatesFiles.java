@@ -16,7 +16,7 @@ public class PrintDuplicatesFiles implements DuplicateResult {
      * 1. ${f2}
      * 2. ${f3}
      * …
-     * 
+     * <p>
      * What do you want to do? (0 = ignore, 1 = delete, 2 = create soft link, 3 = create hard link)
      */
     @Override
@@ -28,7 +28,7 @@ public class PrintDuplicatesFiles implements DuplicateResult {
             }
             System.out.println();
             System.out.println("What do you want to do? (0 = ignore, 1 = delete, 2 = create soft link, 3 = create hard link)");
-        }else {
+        } else {
             System.out.println("No file is duplicated");
         }
     }
